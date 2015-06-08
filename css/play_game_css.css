@@ -1,0 +1,626 @@
+* {
+	color: white;
+	cursor: crosshair;
+}
+
+body {
+	background-image: url("../img/general/bkg_point.png");
+	background-repeat: repeat;
+	z-index: -100;
+}
+
+/*---------------ON EXECUTION--------------------*/
+
+#onExecutionText {
+	display: inline-block;
+	margin-right: 7px;
+}
+
+#onExecutionInfo {
+	color: #363636;
+	background-color: #aa9167;
+	border-color: #feb551;
+}
+
+.executionOption {
+	display: inline-block;
+	font-family: "aspace";
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-size: 5pt;
+	text-align: center;
+	width: 124px;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 2pt;
+	cursor: pointer;
+}
+
+#surrenderButton {
+	color: #631201;
+	letter-spacing: 1px;
+	font-weight: bold;
+	background-color: #dc9b7c;
+	border-color: #631201;
+}
+
+#middleMenuWrapper {
+	margin-top: 7px;
+	width: 460px;
+}
+
+/*-----------------------------GAME INFO----------------------------------*/
+
+#gameInfoWrapper {
+	clear: both;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+/*players*/
+
+#playersWrapper {
+	float: left;
+}
+
+.playerInfo {
+	float: left;
+}
+
+#vsText {
+	float: left;
+	color: #008cab;
+	font-size: 12pt;
+}
+
+.playerNick {
+	font-family: "aspace";
+	color: #e77823;
+	font-size: 7pt;
+	float: left;
+	cursor: pointer;
+}
+
+.playerNick:hover {
+	text-decoration: underline;
+}
+
+.playerNick, #vsText {
+	margin-top: 11px;
+}
+
+.playerPhoto { /* HAY QUE BORRAR LA IMAGEN POR DEFAULT, ES SOLO PARA PRUEBAS DE MOMENTO*/
+	background-image: url("../img/general/user_img.png");
+	background-size: 38px 38px;
+	background-repeat: no-repeat;
+	width: 38px;
+	height: 38px;
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+/*state*/
+
+#playerStateWrapper {
+	float: left;
+	margin-left: 30px;
+	margin-top: 9px;
+}
+
+#stateText {
+	font-size: 9pt;
+	float: left;
+	margin-top: 1px;	
+}
+
+.turnInfo {
+	float: left;
+	width: 126px;
+	text-align: center;
+	font-family: "aspace";
+	font-style: italic;
+	font-size: 5pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	letter-spacing: 0.5px;
+	margin-left: 2px;
+}
+
+#opponentTurn {
+	background-color: #f42d19;
+}
+
+#inTurn {
+	background-color: #4eb935;
+}
+
+/*-------------------Turn Info Wrapper-------------------*/
+
+.turnInfoWrapper {
+	float: right;
+}
+
+.turnContent {
+	float: left;
+}
+
+.turnInfoText {
+	margin-left: 15px;
+}
+
+.turnInfoText, .turnInfoText p {
+	color: #008cab;
+	font-size: 9pt;
+}
+
+.turnInfoText p {
+	max-width: 80px;
+	text-align: right;
+}
+
+#aviableTimeText {
+	margin-top: 17px;
+	margin-right: 5px;
+}
+
+#aviableShotsValue {
+	font-size: 20pt;
+}
+
+#aviableShotsText {
+	margin-top: 3px;
+	margin-right: 5px;
+}
+
+#aviableShotsWrapper {
+	margin-top: 6px;
+}
+
+/*---------------------------BOARD-----------*/
+
+#boardsWrapper {
+	display: table;
+	height: 0;
+	width: 100%;
+	z-index: 99;
+	opacity: .8;
+}
+
+#boardsContent {
+	display: table-cell;
+	clear: left;
+	clear: right;
+	text-align: center;
+	margin-bottom: 30px;
+	vertical-align: middle;
+}
+
+.boardContainer {
+	display: inline-block;
+	text-align: center;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+.boardNickname {
+	margin-top: 10px;
+	font-family: "aspace";
+	font-size: 8pt;
+}
+
+.boardCell {
+	position: relative;
+	display: table-cell;
+	width: 100%;
+	border-style: solid;
+	border-width: 1px;
+	border-left-width: 0px;
+	font-family: "aspace";
+	border-color: #aa9167;
+	color: #aa9167;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 10px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.boardCellActive {
+	background-color: none;
+	opacity: 0.1;	
+}
+
+.boardCellActive:hover {
+	background-color: lightyellow;
+}
+
+.leftCoordCell {
+	width: 20px;
+	border-right-width: 1px;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+}
+
+.topCoordCell {
+	text-align: center;
+	vertical-align: middle;
+	border: 0;
+}
+
+.boardRow {
+	width: 100%;
+	height: 0;
+	display: table;
+	table-layout: fixed;
+	margin-bottom: -1px;
+}
+
+.topCoordRow {
+	height: 25px !important;
+}
+
+.board {
+	width: 0;
+}
+
+.innerCell {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.greenCell {
+	background-image: url("../img/game/green_cell.png");
+}
+
+.redCell {
+	background-image: url("../img/game/red_cell.png");
+}
+
+.whiteCell {
+	background-image: url("../img/game/white_cell.png");
+}
+
+.shieldCell {
+	background-image: url("../img/game/shield_cell.png");
+}
+
+
+.boardShip {
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -2;
+	background-image: url("../ship1.gif");
+}
+
+/*---------------------BOTTOM-------------------------*/
+
+#bottomWrapper {
+	clear: left;
+	clear: right;
+	margin-right: 20px;
+	margin-left: 20px;
+	height: 40px;
+	margin-bottom: 20px;
+}
+
+/*messages*/
+
+#messageButton, #messageButton * {
+	cursor: pointer;
+}
+
+#messageButton {
+	float: left;
+	position: relative;
+	background-color: #fe561a;
+	width: 36px;
+	height: 36px;
+	border-radius: 7px;
+	text-align: center;
+	margin-right: 15px;
+}
+
+#messageButtonIcon {
+	background-image: url("../img/game/msg_button_icon.png");
+	background-repeat: no-repeat;
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+	margin-top: 7px;
+}
+
+#messageButtonCount {
+	position: absolute;
+	display: inline-block;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: darkred;
+	border-radius: 5px;
+	font-size: 8pt;
+	top: -6px;
+	right: -6px;
+}
+
+/*stats*/
+
+.bottomStat {
+	float: left;
+	margin-right: 13px;
+}
+
+.bigStat * {
+	float: left;
+}
+
+.bigStat .computerFont {
+	font-size: 9pt;
+	color: #008cab;
+	margin-top: 7px;
+}
+
+.bigStat .number {
+	margin-left: 5px;
+	font-size: 15pt;
+}
+
+.smallStat {
+	text-align: center;
+}
+
+.smallStat .computerFont {
+	font-size: 9pt;
+}
+
+.smallStat .number {
+	color: #d4b278;
+	margin-top: -5px;
+}
+
+/*abilities*/
+
+#abilityCatalogWrapper {
+	width: 400px;
+	height: 38px;
+	float: right;
+}
+
+.abilityButton {
+	float: right;
+	position: relative;
+	width: 38px;
+	height: 38px;
+	border-radius: 5px;
+	border-color: #631201;
+	border-width: 1px;
+	border-style: solid;
+	margin-left: 12px;
+}
+
+.abilityButton, .abilityButton *{
+	cursor: pointer;
+}
+
+.abilityCount {
+	font-family: "aspace";
+	text-align: left;
+	font-size: 9pt;
+	position: absolute;
+	right: 2px;
+	top: 1px;
+}
+
+#shotAbilityIcon {
+	background-image: url("../img/abilities/extra_shot_icon.png");
+	background-repeat: no-repeat;
+	width: 19px;
+	height: 19px;
+	position: absolute;
+	bottom: 5px;
+	left: 2px;
+}
+
+#bombAbilityIcon {
+	background-image: url("../img/abilities/bomb_icon.png");
+	background-repeat: no-repeat;
+	width: 23px;
+	height: 23px;
+	position: absolute;
+	bottom: 5px;
+	left: 2px;
+}
+
+#lifesaverAbilityIcon {
+	background-image: url("../img/abilities/lifesaver_icon.png");
+	background-repeat: no-repeat;
+	width: 19px;
+	height: 26px;
+	position: absolute;
+	bottom: 5px;
+	left: 2px;
+}
+
+#antishieldAbilityIcon {
+	background-image: url("../img/abilities/antishield_icon.png");
+	background-repeat: no-repeat;
+	width: 18px;
+	height: 24px;
+	position: absolute;
+	bottom: 5px;
+	left: 2px;
+}
+
+#shieldAbilityIcon {
+	background-image: url("../img/abilities/shield_icon.png");
+	background-repeat: no-repeat;
+	width: 17px;
+	height: 20px;
+	position: absolute;
+	bottom: 5px;
+	left: 2px;
+}
+
+#spyAbilityIcon {
+	background-image: url("../img/abilities/spy_icon.png");
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 24px;
+	position: absolute;
+	bottom: 5px;
+	left: 2px;
+}
+
+#verticalPlusAbilityIcon {
+	background-image: url("../img/abilities/plus_vertical_icon.png");
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 23px;
+	position: absolute;
+	bottom: 5px;
+	left: 2px;
+}
+
+#horizontalPlusAbilityIcon {
+	background-image: url("../img/abilities/plus_horizontal_icon.png");
+	background-repeat: no-repeat;
+	width: 23px;
+	height: 20px;
+	position: absolute;
+	bottom: 5px;
+	left: 2px;
+}
+
+/*-------------------CHAT------------------*/
+
+
+#chatWrapper {
+	clear: left;
+	clear: right;
+	position: absolute;
+	top: 150px;
+	bottom: 100px;
+	left: 15px;
+	z-index: 2;
+	min-height: 250px;
+}
+
+#chatTopLine div{
+	position: absolute;
+	right: 5px;
+	top: -1px;
+	font-family: Arial;
+	font-size: 8pt;
+	color: black !important;
+	cursor: pointer;
+}
+
+#chatTopLine {
+	width: 250px;
+	height: 13px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	background-color: #f3561d;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #f3561d;
+	cursor: pointer;
+	opacity: 0.4;
+}
+
+#chat {
+	width: 250px;
+	height: 100%;
+	background-color: black;
+	border-color: #f3561d;
+	border-width: 1px;
+	padding: 5px;
+	padding-top: 1px;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	opacity: 0.7;
+}
+
+#chat * {
+	font-family: "aspace";
+	font-size: 8pt;
+	cursor: auto !important;
+}
+
+#chatContent {
+	position: absolute;
+	top: 14px;
+	bottom: 27px;
+	width: 240px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#chatContent * {
+	max-width: 240px;
+	word-wrap: break-word;
+}
+
+.chatMsgElement {
+	display: inline-block;
+}
+
+.chatNickMsg{
+	margin-right: 5px;
+}
+
+.opponentMsg .chatNickMsg {
+	color: #f3561d;
+}
+
+.yourMsg .chatNickMsg {
+	color: #008cab;
+}
+
+.chatMsg {
+	color: white !important;
+}
+
+#newMsgTextBox {
+	position: absolute;
+	bottom: 5px;
+	width: 240px;
+	color: black !important;
+	height: 20px;
+	padding: 0;
+	margin: 0;
+	padding-left: 5px;
+	border-width: 1px;
+	border-style: solid;
+	box-shadow: 0;
+	border-color: lightgray;
+	letter-spacing: 1px;
+}
+
+/*-----------BACKGROUND SPACE IMAGE--------------*/
+
+#bkgSpaceImage {
+	position: absolute;
+	background-image: url("../img/game/bkg_img1.png");
+	background-repeat:  no-repeat;
+	background-size: 100% 90%;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background-position: center;
+	z-index: -50;
+	min-height: 500px;
+	min-width: 1000px;
+	opacity: .7;
+}

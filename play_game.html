@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8" /> 
+	<title>Jugar Partida</title>
+	<link rel="stylesheet" type="text/css" href="css/general_css.css">
+	<link rel="stylesheet" type="text/css" href="css/play_game_css.css">
+	<link rel="stylesheet" type="text/css" href="css/circle_count_css.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/play_game_js.js"></script>
+	<script src="js/circle_count_js.js"></script>
+</head>
+
+<body>
+	<div id = "menuWrapper">
+		<div id = "logoWrapper">
+			<div id = "logoImg"></div>
+			<div id = "logoText">
+				<div class = "battlepongText">BATTLE PONG</div>
+				<div id = "screenDescription" class = "computerFont">PANEL DE MANDO</div>
+			</div>
+		</div>
+
+		<div id = "userMenuWrapper">
+			<div id = "userImg"></div>
+			<div id = "nickWrapper">
+				<div id = "userNickname" class = "computerFont">commanderEnder</div>
+				<div id = "moreOptionsNickIcon"></div>
+			</div>
+		</div>
+
+		<div id = "middleMenuWrapper">
+			<div id = "onExecutionText" class = "computerFont">en desarrollo:</div>
+			<div id = "onExecutionInfo" class = "executionOption">PARTIDA EN LINEA</div>
+			<div id = "surrenderButton" class = "executionOption">RENDIRSE</div>
+		</div>
+
+		<div id = "menuOptionsWrapper" class = "computerFont">
+			<div id = "languagetOption" class = "menuOption">
+				<div id = "worldIcon"></div>
+				<div id = "languageText" class  ="menuOptionText">español</div>
+				<span class = "moreOptionsMenuIcon"></span>
+			</div>
+
+			<div id = "reportOption" class = "menuOption">
+				<div id = "reportIcon"></div>
+				<div id = "reportText" class  ="menuOptionText">reportes</div>
+			</div>
+		</div>
+		<div id = "logoBars"></div>
+		<div id = "menuBars"></div>
+	</div>
+
+	<div id = "gameInfoWrapper">
+
+		<div id = "playersWrapper">
+			<div id = "player1info" class = "playerInfo">
+				<div id = "player1nick" class = "playerNick">NicknameJugador1</div>
+				<div id = "player1photo" class = "playerPhoto"></div>
+			</div>
+			<div id = "vsText" class = "computerFont">vs</div>
+			<div id = "player2info" class = "playerInfo">
+				<div id = "player2photo" class = "playerPhoto"></div>
+				<div id = "player2nick" class = "playerNick">NicknameJugador2</div>
+			</div>
+		</div>
+
+		<div id = "playerStateWrapper">
+			<div id = "stateText" class = "computerFont">estado:</div>
+			<div id ="inTurn" class ="turnInfo">EN TURNO</div>
+			<div id ="opponentTurn" class ="turnInfo">OPONENTE EN TURNO</div>
+		</div>
+
+		<div id = "turnInfoWrapper">
+
+			<div id = "aviableShotsWrapper" class = "turnInfoWrapper">
+				<div id = "aviableShotsText" class = "turnInfoText turnContent computerFont"><p>DISPAROS DISPONIBLES:</p></div>
+				<div id = "aviableShotsValue" class = "turnContent number">10</div>
+			</div>
+
+			<div id = "aviableTiemeWrapper" class = "turnInfoWrapper">
+				<div id = "aviableTimeText" class = "turnInfoText turnContent computerFont">TIEMPO DISPONIBLE:</div>
+
+				<div id = "timeCount" class = "turnContent">
+					<div id = "backCircleContainer">
+						<div id = "timeText" class = "number">10</div>
+						<div class = "backCountCircle timeCircle">
+						</div>
+					</div>
+					<div class = "clipHalfCircleLeft">
+						<div id ="leftHalfCircle" class = "timeCircle countCircle clipHalfCircleRight">
+						</div>
+					</div>
+					<div class = "clipHalfCircleRight">
+						<div id = "rightHalfCircle" class = "timeCircle countCircle clipHalfCircleRight">
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>		
+	</div>
+
+	<div id = "boardsWrapper">
+		<div id = "boardsContent">
+			
+		</div>
+	</div>
+
+	<div id = "bottomWrapper">
+
+		<div id = "messageButton">
+			<div id = "messageButtonIcon"></div>
+			<div id = "messageButtonCount">0</div>
+		</div>
+
+		<div class = "bottomStat bigStat">
+			<div class = "computerFont">PUNTOS:</div>
+			<div id = "pointsValue" class = "number">10</div>
+		</div>
+
+		<div class = "bottomStat bigStat">
+			<div class = "computerFont">NAVES ENEMIGAS:</div>
+			<div id = "enemyShipsValue" class = "number">10</div>
+		</div>
+
+		<div class = "bottomStat smallStat">
+			<div class = "computerFont">disparos</div>
+			<div id =  "shotsValue" class = "number">1000</div>
+		</div>
+
+		<div class = "bottomStat smallStat">
+			<div class = "computerFont">aciertos</div>
+			<div id = "hitsValue" class = "number">900</div>
+		</div>
+
+		<div class = "bottomStat smallStat">
+			<div class = "computerFont">fallos</div>
+			<div id = "missesValue" class = "number">100</div>
+		</div>
+
+		<div id = "abilityCatalogWrapper">
+
+			<div class = "abilityButton" data-ability =  "oneShotTurn" title = "Tiro Extra">
+				<div id = "shotAbilityIcon"></div>
+				<div id = "shotAbilityCount" class = "abilityCount">10</div>
+			</div>
+
+			<div class = "abilityButton" data-ability =  "bomb" title = "Bomba">
+				<div id = "bombAbilityIcon"></div>
+				<div id = "bombAbilityCount" class = "abilityCount">10</div>
+			</div>
+
+			<div class = "abilityButton" data-ability =  "lifesaver" title = "Salva Vidas">
+				<div id = "lifesaverAbilityIcon"></div>
+				<div id = "lifesaverAbilityCount" class = "abilityCount">10</div>
+			</div>
+
+			<div class = "abilityButton" data-ability =  "antishield" title = "Anti-escudo">
+				<div id = "antishieldAbilityIcon"></div>
+				<div id = "antishieldAbilityCount" class = "abilityCount">10</div>
+			</div>
+
+			<div class = "abilityButton" data-ability =  "shield" title = "Escudo">
+				<div id = "shieldAbilityIcon"></div>
+				<div id = "shieldAbilityCount" class = "abilityCount">10</div>
+			</div>
+
+			<div class = "abilityButton" data-ability =  "spy" title = "Espía">
+				<div id = "spyAbilityIcon"></div>
+				<div id = "spyCount" class = "abilityCount">10</div>
+			</div>
+
+			<div class = "abilityButton" data-ability =  "verticalPlus" title = "+1 Vertical">
+				<div id = "verticalPlusAbilityIcon"></div>
+				<div id = "verticalPlusCount" class = "abilityCount">10</div>
+			</div>
+
+			<div class = "abilityButton" data-ability =  "horizontalPlus" title = "+1 Horizontal">
+				<div id = "horizontalPlusAbilityIcon"></div>
+				<div id = "horizontalPlusCount" class = "abilityCount">10</div>
+			</div>
+		</div>
+	</div>
+
+	<div id = "chatWrapper">
+		<div id = "chatTopLine"><div>--</div></div>
+		<div id = "chat">
+			<div id = "chatContent">
+			</div>
+			<div id = "chatTextBox">
+				<input id = "newMsgTextBox" type = "textBox" size = "30">
+			</div>
+		</div>
+	</div>
+
+	<div id = "bkgSpaceImage">
+	</div>
+
+	<div id = "waitingWrapper">
+		<div id = "waitingInner">
+			<div id = "waitingMsg">en espera de oponente</div>
+			<div id = "waitingImg"></div>
+		</div>
+		<div id = "waitingBkg"></div>
+	</div>
+</body>

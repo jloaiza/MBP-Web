@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+  	-moz-box-sizing:border-box;
+  	-webkit-box-sizing:border-box;
+}
+
+#timeCount {
+	position: relative;
+	width: 54px;
+	height: 54px;
+}
+
+.timeCircle {
+	width: 54px;
+	height: 54px;
+	border: 3px solid #f42d19;
+	border-radius: 27px;
+	position: absolute;
+	box-shadow: 1px 1px 1px black;
+}
+
+.backCountCircle {
+	border-color: #c4c4c4;
+	border-width: 2px;
+}
+
+.clipHalfCircleLeft {
+	clip: rect(0px, 27px, 54px, 0px);
+	position: absolute;
+}
+
+.clipHalfCircleRight {
+	clip: rect(0px, 54px, 54px, 27px);
+	position: absolute;
+}
+
+#leftHalfCircle {
+	transform: rotate(180deg);
+}
+
+#timeText {
+	position: absolute;
+	width: 54px;
+	text-align: center;
+	top:9px;
+	font-size: 18pt;
+}
