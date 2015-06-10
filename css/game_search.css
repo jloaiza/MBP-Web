@@ -1,0 +1,367 @@
+body {
+	background-color: black;
+	background: url("../img/game_search/bkg.jpg");
+	background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: 100% 100%;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+	min-width: 720px;
+}
+
+html{
+	width: 100%;
+	height: 100%;
+	min-width: 720px;
+}
+
+.font-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img[src$=".gif"], img[src$=".png"] {
+	image-rendering: -moz-crisp-edges; /* Firefox */
+	image-rendering: crisp-edges;
+}
+
+@font-face {
+	font-family: "SF Sports Night";
+	src: url("../fonts/sf_sports_night.ttf");
+}
+
+@font-face {
+	font-family: "ComputerFont";
+	src: url("../fonts/computerfont.ttf");
+}
+
+@font-face {
+  font-family: "Chromia";
+  src: url("../fonts/chromia.otf");
+}
+
+.battlepongText {
+	font-family: "SF Sports Night";
+	margin-bottom: -2px;
+	margin-top: 2px;
+	color: #008cab;
+}
+
+.computerFont {
+	font-family: "ComputerFont";
+	letter-spacing: 0.5px;
+	/*color: white;*/
+}
+
+.number {
+  font-family: "Chromia";
+  color:#3535ff;
+}
+
+#topBar {
+	display:block;
+	clear:both;
+	background-image: url("../img/header/logo_bars.png");
+	background-repeat: no-repeat;
+	width: 1024px;
+	height: 56px;
+	top: 13px;
+	left: 15px;
+}
+
+#leftTop, #userTop, #menuTop, #reportTop, #languageTop{
+	float:left;
+}
+
+#leftTop{
+	color: white; 
+}
+
+#rightTop{
+	float:right;
+}
+
+#logo:hover {
+	background-position: -33px 0;
+	border: none;
+}
+
+#logo {
+	margin: 13px 0 0 5px;
+	float: left;
+	display: block;
+	width: 33px;
+	height: 30px;
+	text-indent: -1000em;
+	background: url(../img/header/logo.png) no-repeat left top;
+	border: none;
+}
+
+#logoTextContainer {
+	float: left;
+	width: auto;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+#userPic {
+	background: url(../img/general/user_img.png) no-repeat left top;
+	background-size: 38px 38px;
+	margin: 10px 0 0 15px;
+	float: left;
+	width: 38px;
+	height: 38px;
+	text-indent: -1000em;
+}
+
+#userNameTop{
+	float:left;
+	margin: 20px 0 0 5px;
+}
+
+#userArrowInfo{
+	background: url(../img/header/more_nick_ani.png) no-repeat left top;
+	margin: 26px 0 0 3px;
+	float: left;
+	display: block;
+	width: 11px;
+	height: 10px;
+	text-indent: -1000em;
+}
+
+#userArrowInfo:hover{
+	background-position: -11px 0;
+	cursor: pointer;
+}
+
+#reportText, #languageText{
+	float:left;
+	color: #f4cd8a;
+	margin: 15px 0 0 5px;
+}
+
+#reportGeneration{
+	background: url(../img/header/report_icon.png) no-repeat left top;
+	background-size: 18px 19px;
+	margin: 15px 0 0 5px;
+	float: left;
+	width: 18px;
+	height: 19px;
+	text-indent: -1000em;
+}
+
+
+#language{
+	background: url(../img/header/world_icon.png) no-repeat left top;
+	background-size: 21px 21px;
+	margin: 15px 0 0 5px;
+	float: left;
+	width: 21px;
+	height: 21px;
+	text-indent: -1000em;
+}
+
+#matches{
+	float:left;
+	display: block;
+	clear: both;
+	width: 1024px;
+	height:460px;
+}
+
+.match:hover{
+	background-position: -283px 0;
+}
+
+.match{
+	background: url(../img/game_search/game_frame_ani.png) no-repeat left top;
+	float: left;
+	margin: 5px 0 0 20px;
+	width: 283px;
+	height: 85px;
+	text-indent: -1000em;
+}
+
+#leftArrow{
+	background: url(../img/game_search/previous_icon_ani.png) no-repeat left top;
+}
+
+#leftArrow:hover{
+	background-position: -35px 0;
+}
+
+#rightArrow{
+	background: url(../img/game_search/next_icon_ani.png) no-repeat left top;
+}
+
+#rightArrow:hover{
+	background-position: -35px 0;
+}
+
+.arrow{
+	width: 35px;
+	height: 55px;
+	float: left;
+	text-indent: -1000em;
+	background-size: 35px 55px;
+	margin-top: 175px;
+	cursor: pointer;
+}
+
+#availableMatches{
+	float:left;
+	width:915px;
+	height:450px;
+}
+
+#bottomBar{
+	width: 1020px;
+	height: 525px;
+	display: block;
+	clear: both;
+	position:relative;
+	margin-left: -10px;
+	/*margin-top:170px;
+	z-index: -99;*/
+}
+
+#leftBottomPanel{
+	background: url(../img/game_search/left_border.png) no-repeat left top;
+	width: 116px;
+	height: 324px;
+	position:absolute;
+	margin-top:-146px;
+	z-index: -99;
+}
+
+#rightBottomPanel{
+	background: url(../img/game_search/right_border.png) no-repeat left top;
+	width: 116px;
+	height: 324px;
+	position:absolute;
+	margin-left:895px;
+	margin-top: -146px;
+	z-index: -98;
+}
+
+#leftBottomLight{
+	background: url(../img/game_search/left_light.png) no-repeat left top;
+	width: 559px;
+	height: 525px;
+	position: absolute;
+	margin-top: -344px;
+	z-index: -97;
+}
+
+#rightBottomLight{
+	background: url(../img/game_search/right_light.png) no-repeat left top;
+	width: 559px;
+	height: 525px;
+	position:absolute;
+	margin-left: 453px;
+	margin-top: -344px;
+	z-index: -96;
+}
+
+#bottomController{
+	background: url(../img/game_search/joystick_ani.png) no-repeat left top;
+	width: 95px;
+	height: 180px;
+	position:absolute;
+	margin-left: 470px;
+}
+
+#bottomController:hover{
+	background-position: -95px 0;
+}
+
+#bottomAvailableAbilities{
+	width: 205px;
+	height: 125px;
+	position:absolute;
+	margin-left: 150px;
+	margin-top:15px;
+	z-index: -95;
+}
+
+.ability{
+	width:26px;
+	height:26px;
+	float:left;
+	margin: 15px 0 0 20px;
+}
+
+#shield{
+	background: url(../img/abilities/shield_icon.png) no-repeat left top;
+}
+#antiShield{
+	background: url(../img/abilities/antishield_icon.png) no-repeat left top;
+}
+#bomb{
+	background: url(../img/abilities/bomb_icon.png) no-repeat left top;
+}
+#extraShot{
+	background: url(../img/abilities/extra_shot_icon.png) no-repeat left top;
+}
+#lifeSaver{
+	background: url(../img/abilities/lifesaver_icon.png) no-repeat left top;
+}
+#plusHorizontal{
+	background: url(../img/abilities/plus_horizontal_icon.png) no-repeat left top;
+}
+#plusVertical{
+	background: url(../img/abilities/plus_vertical_icon.png) no-repeat left top;
+}
+#spy{
+	background: url(../img/abilities/spy_icon.png) no-repeat left top;
+}
+
+#availableAbilitiesText{
+	color: white;
+	margin-top: 105px;
+	margin-left: 20px;
+}
+
+#bottomStatistics{
+	width: 205px;
+	height: 125px;
+	position:absolute;
+	margin-left: 650px;
+	margin-top: 25px;
+	z-index: -94;
+}
+
+#ranking{
+	position:absolute;
+	margin: 5px 0 0 120px;
+	text-align: center;
+}
+
+#points{
+	position:absolute;
+	margin: 5px 0 0 190px;
+	text-align: center;
+}
+
+#experience{
+	position:absolute;
+	margin: 60px 0 0 0;
+	text-align: center;
+}
+
+#victories{
+	position:absolute;
+	margin: 60px 0 0 90px;
+	text-align: center;
+}
+
+#loses{
+	position:absolute;
+	margin: 60px 0 0 170px;
+	text-align: center;
+}
+
