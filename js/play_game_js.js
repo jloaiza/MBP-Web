@@ -16,12 +16,45 @@ _horizontalOnePlusActive = false;
 
 _visibleChat = false;
 
-function removeWaiting () {
+function hideWaiting () {
 	time = 150;
-	$('#waitingWrapper').fadeTo(time, 0);
-	setTimeout(function(){
-		$('#waitingWrapper').remove();
-	}, time);
+	$('#waitingWrapper').fadeOut(time, function () {
+		$(this).hide();
+	});
+}
+
+function showVictory(pVictory, pPoints) {
+	"use strict";
+	var finnishClass;
+	var finnishInfo;
+	if (pVictory) {
+		finnishClass = "victory";
+		finnishInfo = "Victoria";
+	} else {
+		finnishClass = "defeat";
+		finnishInfo = "Derrota";
+	}
+	$("#waitingInner").html('<div class = "finnishInfo ' + finnishClass + '">'
+			+ '<div>' + finnishInfo + '</div>'
+			+ '<div class = "' + finnishClass + 'Bkg finnishInfoBkg"></div>'
+		+ '</div>'
+		+ '<div class = "finnishStat">'
+			+ '<span id = "finnishPointsTitle">puntos: </span>' 
+			+ '<span class = "number">' + pPoints + '</span>'
+		+ '</div>' 
+	);
+	$("#waitingWrapper").show();
+	$("#waitingWrapper").fadeIn(150);
+}
+
+function showWaiting(pMessage) {
+	/*<div id = "waitingMsg">en espera de oponente</div>
+	<div id = "waitingImg"></div>*/
+	$("#waitingInner").html('<div id = "waitingMsg">' + pMessage +'</div>'
+		+ '<div id = "waitingImg"></div>' 
+	);
+	$("#waitingWrapper").show();
+	$("#waitingWrapper").fadeIn(150);
 }
 
 function extraShotClick(evt) {
@@ -391,6 +424,7 @@ function showChat(){
 	$("#chatWrapper").show();
 	$("#chatWrapper").animate({opacity: 1}, 500);
 	$("#messageButtonCount").html(0);
+	$("#messageButtonCount").hide();
 	_visibleChat = true;
 	$("#newMsgTextBox").focus();
 }
@@ -432,6 +466,7 @@ function addChatMsg(pMsg, pNickname){
 
 function addChatFeedMsg(pMsg, pNickname) {
 	if (!_visibleChat){
+		$("#messageButtonCount").show();
 		count = Number($("#messageButtonCount").html());
 		$("#messageButtonCount").html(count+1);
 	}
@@ -448,8 +483,8 @@ $(document).ready(function () {
 	hideChat();
 });
 $(document).ready(function () {
-	createBoards(15, "2", "22");
+	createBoards(25, "2", "22");
 });
 $(document).ready(setListeners);
 $(document).ready(resizeHandler);
-$(document).ready(removeWaiting);
+$(document).ready(hideWaiting);
