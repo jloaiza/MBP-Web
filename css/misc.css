@@ -1,0 +1,92 @@
+.font-smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img[src$=".gif"], img[src$=".png"] {
+  image-rendering: -moz-crisp-edges;         /* Firefox */
+  image-rendering: crisp-edges;
+ }
+
+
+@font-face {
+  font-family: "ComputerFont";
+  src: url("../fonts/computerfont.ttf");  
+}
+
+@font-face {
+  font-family: "aspace";
+  src: url("../fonts/aspace.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "aspace";
+  src: url("../fonts/aspace_italic.otf");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "aspace";
+  src: url("../fonts/aspace_light.otf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "aspace";
+  src: url("../fonts/aspace_light_italic.otf");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF Sports Night";
+  src: url("../fonts/sf_sports_night.ttf");
+}
+
+@font-face {
+  font-family: "Chromia";
+  src: url("../fonts/chromia.otf");
+}
+
+body, html{
+	width: 100%;
+	height: 100%;
+  min-width: 1000px;
+}
+/*
+* {
+	margin: 0px;
+	padding: 0px;
+}
+*/
+.battlepongText {
+	font-family: "SF Sports Night";
+	margin-bottom: -2px;
+	margin-top: 2px;
+	color: #008cab;
+}
+
+.aspace{
+	font-family: "aspace";
+}
+
+.computerFont {
+  font-family: "ComputerFont";
+  letter-spacing: 0.5px;
+}
+
+.number {
+  font-family: "Chromia";
+  color:#3535ff;
+}
+
+.grayedLetters{
+    color: graytext;
+    margin-left: 5em;
+    font-size: .5em;
+}
+

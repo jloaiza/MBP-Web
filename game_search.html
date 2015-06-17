@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title> Buscar Partida </title>
+	<link rel="stylesheet" type="text/css" href="css/misc.css" />
 	<link rel="stylesheet" type="text/css" href="css/game_search.css" />
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
@@ -52,20 +53,29 @@
 			</div>
 		</div>
 		<div id="bottomStatistics">
-			<div id="ranking" class="number">502
-				<div class="computerFont" style="color:white">Ranking</div>
+			<div id="sTop">
+				<div class="statisticContainer">
+					<div id="ranking" class="number">502</div>
+					<div class="computerFont" style="color:white">Ranking</div>
+				</div>
+				<div class="statisticContainer">	
+					<div id="points" class="number" >69</div>
+					<div class="computerFont" style="color:white">Puntos</div>	
+				</div>
 			</div>
-			<div id="points" class="number" >69
-				<div class="computerFont" style="color:white">Puntos</div>	
-			</div>
-			<div id="experience" class="number">1069
-				<div class="computerFont" style="color:white">Experiencia</div>
-			</div>
-			<div id="victories" class="number">1001
-				<div class="computerFont" style="color:white">Victorias</div>
-			</div>
-			<div id="loses" class="number">69
-				<div class="computerFont" style="color:white">Derrotas</div>
+			<div id="sBot">
+				<div class="statisticContainer">
+					<div id="experience" class="number">1069</div>
+					<div class="computerFont" style="color:white">Experiencia</div>
+				</div>
+				<div class="statisticContainer">
+					<div id="victories" class="number">1001</div>
+					<div class="computerFont" style="color:white">Victorias</div>
+				</div>
+				<div class="statisticContainer">
+					<div id="loses" class="number">69</div>
+					<div class="computerFont" style="color:white">Derrotas</div>
+				</div>
 			</div>
 		</div>
 		<div id="rightBottomPanel"></div>
@@ -76,3 +86,4 @@
 
 	<script type="text/javascript" src="js/game_search.js"></script>
 </body>
+</html>

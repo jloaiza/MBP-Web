@@ -1,0 +1,263 @@
+body {
+	background-color: black;
+	background-image: url("../img/general/bkg_point.png");
+	background-repeat: repeat;
+	z-index: -100;
+	width: 100%;
+	height: 100%;
+	min-width: 720px;
+}
+
+#topBar {
+	display:block;
+	clear:both;
+	background-image: url("../img/header/logo_bars.png");
+	background-repeat: no-repeat;
+	overflow:hidden;
+	min-width: 1024px;
+	height: 56px;
+	top: 13px;
+	left: 15px;
+}
+
+#leftTop, #menuTop, #reportTop, #languageTop{
+	float:left;
+}
+
+#leftTop{
+	color: white; 
+}
+
+#rightTop{
+	float:right;
+	margin-right: 30px;
+}
+
+#logo:hover {
+	background-position: -33px 0;
+	border: none;
+}
+
+#logo {
+	margin: 13px 0 0 5px;
+	float: left;
+	display: block;
+	width: 33px;
+	height: 30px;
+	text-indent: -1000em;
+	background: url(../img/header/logo.png) no-repeat left top;
+	border: none;
+}
+
+#logoTextContainer {
+	float: left;
+	width: auto;
+	margin-top: 10px;
+	margin-left: 5px;
+} 
+
+#reportText, #languageText{
+	float:left;
+	color: #f4cd8a;
+	margin: 15px 0 0 5px;
+}
+
+#reportGeneration{
+	background: url(../img/header/report_icon.png) no-repeat left top;
+	background-size: 18px 19px;
+	margin: 15px 0 0 5px;
+	float: left;
+	width: 18px;
+	height: 19px;
+	text-indent: -1000em;
+}
+
+
+#language{
+	background: url(../img/header/world_icon.png) no-repeat left top;
+	background-size: 21px 21px;
+	margin: 15px 0 0 5px;
+	float: left;
+	width: 21px;
+	height: 21px;
+	text-indent: -1000em;
+}
+
+#imageUploadContainer{
+	float: left;
+        clear: both;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.imgInfoContainer{
+	float: left;
+}
+
+#userImageToUpload{
+	float: left;
+	width: 400px;
+	height: 400px;
+	background: url(../img/new_user/default_background.png) no-repeat;
+        content: url(../img/new_user/default.png);
+}
+
+.imageInfo{
+	font-size: .7em;
+	color: gray;
+	width: 370px;
+	margin: 230px 0 0 20px;
+}
+
+#inputUserImageUpload{
+	color: white;
+	margin: 10px 0 0 20px;
+}
+
+#userTypeSelect{
+	float: left;
+	clear: both;
+	margin-top: 20px;
+	width: 97%;
+}
+
+#userTypeLabel{
+	display: block;
+	color: white;
+	margin-left: 37%;
+}
+
+#userType, #gender, #countries, #birthDate{
+	float: left;
+	margin: 1em 0 0 35%;
+	background: black;
+	color: white;
+	width: 30%;
+	border-radius: 10px;
+}
+
+#userType:focus, #gender:focus, #countries:focus, #birthDate:focus,
+#email:focus{
+	border: solid #008cab;
+}
+
+.formHeader{
+	font-size: 1.8em;
+	color: #008cab;
+	
+}
+
+.checkIcon{
+    content: url(../img/new_user/check.png);
+    /*background: url(../img/new_user/check.png) 20px 20px;*/
+}
+
+.crossIcon{
+    content: url(../img/new_user/cross.png);
+    /*background: url(../img/new_user/cross.png) 20px 20px;*/
+}
+
+.verificationIcon{
+    float: right;
+    margin: 5px 15% 0 0;
+    width: 20px;
+    height: 20px;
+    border-style: none;
+    content: url(../img/new_user/default.png);
+}
+
+.userForm{
+    float: left;
+    clear: both;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.headerNormalInput{
+	display: block;
+	clear: both;
+	color: white;
+	margin:1.5em 0 0 20%;
+}
+
+.formNormalInput{
+	background: black;
+	color: white;
+	width: 60%;
+	height: 1.7em;
+	margin-left: 20%;
+	border-radius: 10px;
+        -webkit-border-radius: 30;
+	-moz-border-radius: 30;
+	border-radius: 30px;
+	
+}
+
+.formNormalInput:focus, #description:focus{
+	border: solid #008cab;
+}
+
+#description{
+    resize: none;
+    background: black;
+    color: white;
+    width: 60%;
+    height: 8em;
+    margin-left: 20%;
+    border-radius: 10px;
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+}
+
+.submitButton {
+  background: black;
+  background-image: -webkit-linear-gradient(top, #000, #000);
+  background-image: -moz-linear-gradient(top, #000, #000);
+  background-image: -ms-linear-gradient(top, #000, #000);
+  background-image: -o-linear-gradient(top, #000, #000);
+  background-image: linear-gradient(to bottom, #000, #000);
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  color: white;
+  font-size: 1.2em;
+  padding: 5px 15% 5px 15%;
+  text-decoration: none;
+  margin-left: 30%;
+}
+
+.submitButton:hover {
+  background: black;
+  background-image: -webkit-linear-gradient(top, #eb6d0c, #000);
+  background-image: -moz-linear-gradient(top, #eb6d0c, #000);
+  background-image: -ms-linear-gradient(top, #eb6d0c, #000);
+  background-image: -o-linear-gradient(top, #eb6d0c, #000);
+  background-image: linear-gradient(to bottom, #eb6d0c, #000);
+  text-decoration: none;
+  border: solid #eb6d0c 1px;
+}
+
+#errorMessage{
+    background-color: transparent;
+    -webkit-border-radius: 30;
+    -moz-border-radius: 30;
+    border-radius: 30px;
+    width: 65%;
+    height: auto;
+    margin-left: 18%;
+    /*padding: 10px 5% 10px 5%;*/
+    float: left;
+    clear: both;
+}
+
+#errorList{
+    color: red;
+    font-size: 1.2em;
+}
+
+#bottomBar{
+    float: left;
+    clear: both;
+    width: 100%;
+    height: 100px;
+}

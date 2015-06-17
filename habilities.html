@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Habilidades</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/misc.css" />
+	<link rel="stylesheet" type="text/css" href="css/habilities.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="topBar">
+		<div id="leftTop">
+			<div id="menuTop">
+				<a id="logo" href="" title="Menú Principal">Menú Principal</a>
+				<div id="logoTextContainer">
+					<div class="battlepongText">Battle Pong</div>
+					<div class="computerFont">Nave Principal</div>
+				</div>
+			</div>
+			<div id="userTop">
+				<a id="userPic" href="" title="Perfil de Usuario">Perfil de Usuario</a>
+				<div id="userNameTop" class="computerFont">Nombre de Usuario</div>
+				<div id="userArrowInfo" ></div>
+			</div>
+		</div>
+
+		<div id="rightTop" >
+			<div id="reportTop" >
+				<a id="reportGeneration" href="" title="Reportes">Reportes</a>
+				<div id="reportText" class="computerFont">Reporte</div>
+			</div>
+			<div id="languageTop">
+				<a id="language" href="" title="Idiomas">Idiomas</a>
+				<div id="languageText" class="computerFont">Español</div>
+			</div>
+
+		</div>
+	</div>
+        <div id="tableContainer">
+            <table id="abilitiesTable">
+                <tr>
+                    <th>Habilidad</th>
+                    <th>Puntos</th>
+                    <th>Experiencia</th>
+                    <th>Partidas Perdidas</th>
+                    <th>Partidas Ganadas</th>
+                    <th>Ranking</th>
+                </tr>
+
+                <tr>
+                    <td>Espia</td>
+                    <td>234</td>
+                    <td>23</td>
+                    <td>69</td>
+                    <td>69</td>
+                    <td>169</td>
+                </tr>
+
+            </table>
+            <div id="editButtonContainer"></div>
+        </div>
+        <div id="modifyAbilityContainer">
+            <div id="modifyAbilityBackground"></div>
+            <div id="closeAbilityContainer"></div>
+            <div id="abilityFrameContainer">
+                <p>
+                    <label for="name" class="number formLabelHeader">Nombre</label>
+                    <input id="name" class="number formInput" type="text" name="name"
+                           autocomplete="off">
+                </p>
+                <p>
+                    <label for="points" class="number formLabelHeader">Puntos</label>
+                    <input id="points" class="number formInput" type="number" name="points" min="0" >
+                </p>
+                <p>
+                    <label for="experience" class="number formLabelHeader">Experiencia</label>
+                    <input id="experience" class="number formInput" type="number" name="experience" min="0" >
+                </p>
+                <p>
+                    <label for="losses" class="number formLabelHeader">Partidas Perdidas</label>
+                    <input id="losses" class="number formInput" type="number" name="losses" min="0" >
+                </p>
+                <p>
+                    <label for="wins" class="number formLabelHeader">Partidas Ganadas</label>
+                    <input id="wins" class="number formInput" type="number" name="wins" min="0" >
+                </p>
+                <p>
+                    <label for="ranking" class="number formLabelHeader">Ranking</label>
+                    <input id="ranking" class="number formInput" type="number" name="ranking" min="0" >
+                </p>
+                <button id="changesReady" class="aspace">Listo</button>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/habilities.js"></script>
+    </body>
+</html>

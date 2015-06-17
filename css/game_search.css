@@ -12,62 +12,20 @@ body {
 	height: 100%;
 	min-width: 720px;
 }
-
+/*
 html{
 	width: 100%;
 	height: 100%;
 	min-width: 720px;
 }
-
-.font-smoothing {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-img[src$=".gif"], img[src$=".png"] {
-	image-rendering: -moz-crisp-edges; /* Firefox */
-	image-rendering: crisp-edges;
-}
-
-@font-face {
-	font-family: "SF Sports Night";
-	src: url("../fonts/sf_sports_night.ttf");
-}
-
-@font-face {
-	font-family: "ComputerFont";
-	src: url("../fonts/computerfont.ttf");
-}
-
-@font-face {
-  font-family: "Chromia";
-  src: url("../fonts/chromia.otf");
-}
-
-.battlepongText {
-	font-family: "SF Sports Night";
-	margin-bottom: -2px;
-	margin-top: 2px;
-	color: #008cab;
-}
-
-.computerFont {
-	font-family: "ComputerFont";
-	letter-spacing: 0.5px;
-	/*color: white;*/
-}
-
-.number {
-  font-family: "Chromia";
-  color:#3535ff;
-}
-
+*/
 #topBar {
 	display:block;
 	clear:both;
 	background-image: url("../img/header/logo_bars.png");
 	background-repeat: no-repeat;
-	width: 1024px;
+	overflow:hidden;
+	min-width: 1024px;
 	height: 56px;
 	top: 13px;
 	left: 15px;
@@ -173,6 +131,12 @@ img[src$=".gif"], img[src$=".png"] {
 	height:460px;
 }
 
+#availableMatches{
+	float:left;
+	width:915px;
+	height:450px;
+}
+
 .match:hover{
 	background-position: -283px 0;
 }
@@ -184,6 +148,39 @@ img[src$=".gif"], img[src$=".png"] {
 	width: 283px;
 	height: 85px;
 	text-indent: -1000em;
+}
+
+.matchUserImage{
+	float: left;
+	background-size: 60px 60px;
+	background: white;
+	width: 60px;
+	height: 60px;
+	margin: 12px 0 0 15px;
+}
+.matchIcon{
+	float:left;
+	background-size: 20px 20px;
+	width: 20px;
+	height: 20px;
+	margin-top: 5px;
+}
+
+.matchIconsContainer{
+	float:left;
+	text-indent: initial;
+	margin: 5px 0 0 10px;
+}
+
+.matchSubIconContainer{
+	float: left;
+	margin-left: 5px;
+}
+
+.matchTextContainer{
+	float: left;
+	text-indent: initial;
+	margin: 15px 0 0 15px;
 }
 
 #leftArrow{
@@ -212,14 +209,8 @@ img[src$=".gif"], img[src$=".png"] {
 	cursor: pointer;
 }
 
-#availableMatches{
-	float:left;
-	width:915px;
-	height:450px;
-}
-
 #bottomBar{
-	width: 1020px;
+	min-width: 1024px;
 	height: 525px;
 	display: block;
 	clear: both;
@@ -327,7 +318,7 @@ img[src$=".gif"], img[src$=".png"] {
 }
 
 #bottomStatistics{
-	width: 205px;
+	width: 250px;
 	height: 125px;
 	position:absolute;
 	margin-left: 650px;
@@ -335,33 +326,24 @@ img[src$=".gif"], img[src$=".png"] {
 	z-index: -94;
 }
 
-#ranking{
-	position:absolute;
-	margin: 5px 0 0 120px;
-	text-align: center;
+#sTop{
+	float: left;
+	margin-left: 100px;
+	clear: both;
+}
+#sBot{
+	float: left;
+	clear: both;
+	margin-left: -30px;
 }
 
-#points{
-	position:absolute;
-	margin: 5px 0 0 190px;
-	text-align: center;
+.statisticContainer{
+	float: left;
+	margin-left: 10px;
 }
 
-#experience{
-	position:absolute;
-	margin: 60px 0 0 0;
+#ranking, #points, #experience, #victories, #loses{
 	text-align: center;
-}
-
-#victories{
-	position:absolute;
-	margin: 60px 0 0 90px;
-	text-align: center;
-}
-
-#loses{
-	position:absolute;
-	margin: 60px 0 0 170px;
-	text-align: center;
+	color: #008cab;
 }
 
