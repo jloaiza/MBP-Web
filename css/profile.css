@@ -123,13 +123,13 @@ body {
 }
 
 #middleContainer{
-	float: left;
 	clear: both;
 	display: block;
 	overflow: hidden;
 	min-width: 1024px;
 	height: 420px;
 	min-height: 420px;
+	width: auto;
 }
 
 #bigUserPic{
@@ -257,6 +257,7 @@ body {
 	float:left;
 	color:white;
 	margin-left: 15px;
+	margin-right: 10px;
 	font-size: .75em;
 	max-height: 85px;
 	overflow: auto;

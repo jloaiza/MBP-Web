@@ -10,7 +10,9 @@ body {
 	background-size: 100% 100%;
 	width: 100%;
 	height: 100%;
-	min-width: 720px;
+	min-width: 1024px;
+	min-height: 720px;
+	margin: 0 0 0 0;
 }
 /*
 html{
@@ -20,15 +22,11 @@ html{
 }
 */
 #topBar {
-	display:block;
 	clear:both;
 	background-image: url("../img/header/logo_bars.png");
 	background-repeat: no-repeat;
-	overflow:hidden;
 	min-width: 1024px;
 	height: 56px;
-	top: 13px;
-	left: 15px;
 }
 
 #leftTop, #userTop, #menuTop, #reportTop, #languageTop{
@@ -41,6 +39,7 @@ html{
 
 #rightTop{
 	float:right;
+	margin-right: 50px;
 }
 
 #logo:hover {
@@ -124,15 +123,16 @@ html{
 }
 
 #matches{
-	float:left;
-	display: block;
+	position: relative;
 	clear: both;
-	width: 1024px;
+	min-width: 1024px;
+	width: auto;
 	height:460px;
 }
 
 #availableMatches{
-	float:left;
+	margin-right: auto;
+	margin-left: auto;
 	width:915px;
 	height:450px;
 }
@@ -144,10 +144,11 @@ html{
 .match{
 	background: url(../img/game_search/game_frame_ani.png) no-repeat left top;
 	float: left;
-	margin: 5px 0 0 20px;
+	margin: 5px 0 0 15px;
 	width: 283px;
 	height: 85px;
 	text-indent: -1000em;
+	cursor: pointer;
 }
 
 .matchUserImage{
@@ -185,6 +186,7 @@ html{
 
 #leftArrow{
 	background: url(../img/game_search/previous_icon_ani.png) no-repeat left top;
+	left: 20px;
 }
 
 #leftArrow:hover{
@@ -193,6 +195,7 @@ html{
 
 #rightArrow{
 	background: url(../img/game_search/next_icon_ani.png) no-repeat left top;
+	right: 20px;
 }
 
 #rightArrow:hover{
@@ -202,41 +205,44 @@ html{
 .arrow{
 	width: 35px;
 	height: 55px;
-	float: left;
 	text-indent: -1000em;
 	background-size: 35px 55px;
 	margin-top: 175px;
 	cursor: pointer;
+	position: absolute;
+	top: 0;
 }
 
 #bottomBar{
 	min-width: 1024px;
-	height: 525px;
-	display: block;
+	width: auto;
 	clear: both;
-	position:relative;
-	margin-left: -10px;
-	/*margin-top:170px;
-	z-index: -99;*/
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 525px;
+	z-index: -99;
 }
 
 #leftBottomPanel{
 	background: url(../img/game_search/left_border.png) no-repeat left top;
 	width: 116px;
 	height: 324px;
-	position:absolute;
-	margin-top:-146px;
-	z-index: -99;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -95;
 }
 
 #rightBottomPanel{
 	background: url(../img/game_search/right_border.png) no-repeat left top;
 	width: 116px;
 	height: 324px;
-	position:absolute;
-	margin-left:895px;
-	margin-top: -146px;
-	z-index: -98;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: -96;
 }
 
 #leftBottomLight{
@@ -244,18 +250,21 @@ html{
 	width: 559px;
 	height: 525px;
 	position: absolute;
-	margin-top: -344px;
-	z-index: -97;
+	left: 0;
+	bottom: 0;
+	z-index: -98;
 }
 
 #rightBottomLight{
 	background: url(../img/game_search/right_light.png) no-repeat left top;
 	width: 559px;
 	height: 525px;
-	position:absolute;
-	margin-left: 453px;
-	margin-top: -344px;
-	z-index: -96;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	/*margin-left: 453px;
+	margin-top: -344px;*/
+	z-index: -97;
 }
 
 #bottomController{
@@ -263,7 +272,11 @@ html{
 	width: 95px;
 	height: 180px;
 	position:absolute;
-	margin-left: 470px;
+	left: 45%;
+	right: 55%;
+	bottom: 0;
+	cursor: pointer;
+	z-index: 100;
 }
 
 #bottomController:hover{
@@ -273,10 +286,10 @@ html{
 #bottomAvailableAbilities{
 	width: 205px;
 	height: 125px;
-	position:absolute;
-	margin-left: 150px;
-	margin-top:15px;
-	z-index: -95;
+	position: absolute;
+	left: 15%;
+	bottom: 12%;
+	z-index: -94;
 }
 
 .ability{
@@ -321,9 +334,9 @@ html{
 	width: 250px;
 	height: 125px;
 	position:absolute;
-	margin-left: 650px;
-	margin-top: 25px;
-	z-index: -94;
+	right: 12%;
+	bottom: 5%;
+	z-index: -93;
 }
 
 #sTop{
@@ -347,3 +360,81 @@ html{
 	color: #008cab;
 }
 
+
+#selectMatchContainer{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    position: absolute;
+    display: none;
+    min-height: 720px;
+    min-width: 1024px;
+}
+
+#closeSelectMatchContainer{
+    background: url(../img/general/cross.png);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    cursor: pointer;
+}
+
+#selectMatchBackground{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: .7;
+    z-index: -1;
+}
+
+.confirmationBtn{
+	display: inline;
+	margin-left: 10%;
+	background: white;
+	border-color: #e77823;
+	border-radius: 30px;
+	width: 100px;
+	height: 2em;
+	font-size: 1.3em;
+
+}
+
+.confirmationBtn:hover{
+	box-shadow: 0 0 5px #e77823;
+}
+
+#confirmationContainer{
+	left: 40%;
+	top: 30%;
+	width: 300px;
+	height: 200px;
+	background: white;
+	position: absolute;
+	border-radius: 30px;
+	-webkit-animation: pulse 3s infinite; /* Chrome, Safari, Opera */
+    animation: pulse 3s infinite;
+}
+
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes pulse {
+    50% {box-shadow: 0 0 20px #e77823;}
+}
+
+/* Standard syntax */
+@keyframes pulse {
+    50% {box-shadow: 0px 0px 20px #e77823;}
+}
+
+.confirmationText{
+	text-align: center;
+	font-size: 1.2em;
+	color: #e77823;
+	padding: 10px 20px 10px 20px;
+}
